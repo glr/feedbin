@@ -1,0 +1,16 @@
+<template name="restaurants">
+    <div id="restaurants">
+        {{#each restaurants}}
+        {{> restaurant}}
+        <input type="button" value="delete" id="{{_id}}" />
+        <hr />
+        {{/each}}
+    </div>
+</template>
+
+<template name="restaurant">
+    <h2>{{name}}</h2>
+    Type:  {{type}}<br />
+    Last Selected:  {{lastSelected}}<br />
+    Date Added:  {{dateAdded}}
+</template>
