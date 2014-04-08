@@ -22,4 +22,3 @@ root.Template.hello.events(
       lastSelected: "never";
     );
 )
-
