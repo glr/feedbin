@@ -2,7 +2,8 @@
     <div id="restaurants">
         {{#each restaurants}}
         {{> restaurant}}
-        <input type="button" value="delete" id="{{_id}}" />
+        <input type="button" value="delete" />
+        <input type="button" value="vote" />
         <hr />
         {{/each}}
     </div>
@@ -12,5 +13,6 @@
     <h2>{{name}}</h2>
     Type:  {{type}}<br />
     Last Selected:  {{lastSelected}}<br />
-    Date Added:  {{dateAdded}}
+    Date Added:  {{dateAdded}}<br />
+    Votes: {{votes}}<br />
 </template>

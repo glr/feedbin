@@ -18,6 +18,8 @@ root.Template.hello.events(
       name: $('input[name="restaurantName"]').val(),
       type: $('input[name="restaurantType"]').val(),
       dateAdded: new Date()
+      votes: 0
+      lastSelected: "never";
     );
 )
 
