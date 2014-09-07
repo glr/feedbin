@@ -1,26 +1,26 @@
 <template name="restaurants">
     <div id="restaurants">
+        <ul class="list-group">
         {{#each restaurants}}
             {{> restaurant}}
         {{/each}}
+        </ul>
     </div>
 </template>
 
 <template name="restaurant">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">{{name}}&nbsp;•&nbsp;<span class="badge">{{votes}}</span>
-                <form class="panel-title pull-right" role="form">
-                    <input type="button" class="btn btn-sm btn-default" value="delete" />
-                    <input type="button" class="btn btn-sm btn-default" value="vote" />
-                    <input type="button" class="btn btn-sm btn-default" value="select" />
-                </form>
-            </div>
-        </div>
-        <div class="panel-body">
+    <li class="list-group-item">
+        <span class="badge">{{votes}}</span>
+        <div class="list-group-item-heading">{{name}}</div>
+            <form class="panel-title pull-right" role="form">
+                <input type="button" class="btn btn-sm btn-default" value="delete" />
+                <input type="button" class="btn btn-sm btn-default" value="vote" />
+                <input type="button" class="btn btn-sm btn-default" value="select" />
+            </form>
+        <div class="list-group-item-text">
             Type:  {{type}}<br />
             Last Selected:  {{lastSelected}}<br />
             Date Added:  {{dateAdded}}<br />
         </div>
-    </div>
+    </li>
 </template>
