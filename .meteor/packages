@@ -8,11 +8,10 @@ autopublish
 insecure
 coffeescript
 accounts-base
-accounts-ui
-accounts-ui-unstyled
 less
 handlebars
 accounts-password
 mizzao:bootstrap-3
 manuelschoebel:less-fontawesome-4
+ian:accounts-ui-bootstrap-3
 

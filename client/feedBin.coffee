@@ -6,8 +6,11 @@ root = window
 #    if err
 #      root.Session.set('errorMessage', err.reason || 'Unknown error')
 
+root.Template.title.title = ->
+  "The Feed Bin"
+
 root.Template.hello.greeting = ->
-  "Welcome to the Feed Bin."
+  "Welcome to The Feed Bin."
 
 root.Template.hello.person = ->
   _.first(root.Meteor.user().emails).address

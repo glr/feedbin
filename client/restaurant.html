@@ -1,19 +1,26 @@
 <template name="restaurants">
     <div id="restaurants">
         {{#each restaurants}}
-        {{> restaurant}}
-        <input type="button" value="delete" />
-        <input type="button" value="vote" />
-        <input type="button" value="select" />
-        <hr />
+            {{> restaurant}}
         {{/each}}
     </div>
 </template>
 
 <template name="restaurant">
-    <h2>{{name}}</h2>
-    Type:  {{type}}<br />
-    Last Selected:  {{lastSelected}}<br />
-    Date Added:  {{dateAdded}}<br />
-    Votes: {{votes}}<br />
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="panel-title">{{name}}&nbsp;•&nbsp;<span class="badge">{{votes}}</span>
+                <form class="panel-title pull-right" role="form">
+                    <input type="button" class="btn btn-sm btn-default" value="delete" />
+                    <input type="button" class="btn btn-sm btn-default" value="vote" />
+                    <input type="button" class="btn btn-sm btn-default" value="select" />
+                </form>
+            </div>
+        </div>
+        <div class="panel-body">
+            Type:  {{type}}<br />
+            Last Selected:  {{lastSelected}}<br />
+            Date Added:  {{dateAdded}}<br />
+        </div>
+    </div>
 </template>

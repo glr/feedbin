@@ -4,19 +4,42 @@
 </head>
 
 <body>
-{{> loginButtons}}
-{{#if currentUser}}
-    {{> hello}}
-    {{> restaurants}}
-{{else}}
-    Log in.
-{{/if}}
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            {{> title}}
+        </div>
+        <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="form">
+                {{> loginButtons}}
+            </form>
+        </div><!--/.navbar-collapse -->
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                {{#if currentUser}}
+                    {{> hello}}
+                {{else}}
+                    Please log in.
+                {{/if}}
+            </div>
+        </div>
+        {{#if currentUser}}
+            {{> restaurants}}
+        {{/if}}
+    </div>
 </body>
+
+
+<template name="title">
+    <div class="navbar-brand">{{title}}</div>
+</template>
+
 
 <template name="hello">
     <h1>Hello {{person}}!</h1>
     {{greeting}}
-    <input type="button" value="Add" />
+    <input type="button" class="btn btn-default" value="Add" />
     <input type="text" name="restaurantName" label="Name" placeholder="Restaurant Name" />
     <input type="text" name="restaurantType" label="Type" placeholder="Type of Restaurant" />
 </template>
