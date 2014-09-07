@@ -7,10 +7,11 @@ standard-app-packages
 autopublish
 insecure
 coffeescript
-bootstrap
 accounts-base
 accounts-ui
 accounts-ui-unstyled
 less
 handlebars
 accounts-password
+mizzao:bootstrap-3
+

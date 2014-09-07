@@ -8,7 +8,6 @@ autoupdate@1.0.6
 binary-heap@1.0.0
 blaze-tools@1.0.0
 blaze@2.0.0
-bootstrap@1.0.1
 callback-hook@1.0.0
 check@1.0.0
 coffeescript@1.0.2
@@ -33,6 +32,7 @@ meteor-platform@1.0.1
 meteor@1.0.3
 minifiers@1.0.2
 minimongo@1.0.2
+mizzao:bootstrap-3@3.2.0
 mongo@1.0.4
 npm-bcrypt@0.7.7
 observe-sequence@1.0.2
